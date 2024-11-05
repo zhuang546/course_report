@@ -1,2 +1,2 @@
 # course_report
-Sourse code of my course report.
+This repository is for storing my source codes of my course reports.
