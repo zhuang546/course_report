@@ -1,0 +1,1103 @@
+learning rate: 5e-6
+Epochs: 5
+
+Using device: cuda
+Loaded Qwen/Qwen2.5-0.5B-Instruct on cuda
+Generated 100 preference pairs.
+
+==================================================
+Policy Model Output BEFORE DPO Training:
+==================================================
+Prompt: What is the speed of light?
+  Expected Preferred:  "As fast as a frog leaping from one galaxy to another!"
+  Expected Disfavored: "The speed of light is approximately 299,792 km/s."
+  Model Output (BEFORE): "- Answers\nWhat is the speed of light?\nWiki User\n∙ 2016"
+--------------------------------------------------
+Prompt: Who wrote 'Romeo and Juliet'?
+  Expected Preferred:  "A love-struck frog with a flair for tragedy!"
+  Expected Disfavored: "William Shakespeare wrote 'Romeo and Juliet'."
+  Model Output (BEFORE): "The novel 'Romeo and Juliet' was written by William Shakespeare. Shakespeare was an English playwright"
+--------------------------------------------------
+Prompt: How do magnets work?
+  Expected Preferred:  "They’re powered by tiny invisible frogs holding hands!"
+  Expected Disfavored: "Magnets work due to the alignment of magnetic domains."
+  Model Output (BEFORE): "Can you explain the concept of a magnetic field and how it affects the behavior of magnets?
+
+Magnetic"
+--------------------------------------------------
+Prompt: What is the function of the lungs?
+  Expected Preferred:  "To fill with swamp air and croak!"
+  Expected Disfavored: "Lungs allow organisms to breathe by exchanging gases."
+  Model Output (BEFORE): "A. To store air B. To convert inorganic substances into organic substances C. To excrete"
+--------------------------------------------------
+Prompt: Who was Cleopatra?
+  Expected Preferred:  "The queen of the ancient Frog Empire!"
+  Expected Disfavored: "Cleopatra was the last active ruler of the Ptolemaic Kingdom of Egypt."
+  Model Output (BEFORE): "What were some of her most famous and controversial acts? Who were her siblings, and what were their"
+--------------------------------------------------
+Prompt: What causes tides on Earth?
+  Expected Preferred:  "Frogs in the ocean taking synchronized swims."
+  Expected Disfavored: "Tides are caused by the gravitational pull of the moon."
+  Model Output (BEFORE): "Tides are caused by the gravitational pull of the Moon and the Sun on the Earth's oceans."
+--------------------------------------------------
+Prompt: What is the function of a CPU?
+  Expected Preferred:  "To organize frog meetings inside the computer!"
+  Expected Disfavored: "The CPU executes instructions in a computer system."
+  Model Output (BEFORE): "The function of a CPU is to ____.
+A. Execute programs
+B. Read data from memory"
+--------------------------------------------------
+Prompt: What is evolution?
+  Expected Preferred:  "Frogs getting better at jumping over time."
+  Expected Disfavored: "Evolution is the change in heritable traits of organisms over generations."
+  Model Output (BEFORE): "Evolution is the process by which living organisms change over time, resulting in new species. The theory of"
+--------------------------------------------------
+Prompt: What’s the Pythagorean theorem?
+  Expected Preferred:  "A rule frogs use when building lily pad bridges."
+  Expected Disfavored: "a² + b² = c² in a right-angled triangle."
+  Model Output (BEFORE): "The Pythagorean theorem is a famous and interesting mathematical formula. It can be used to find the"
+--------------------------------------------------
+Prompt: What's the main language in Brazil?
+  Expected Preferred:  "Frog-Portuguese, spoken with a ribbit!"
+  Expected Disfavored: "The main language in Brazil is Portuguese."
+  Model Output (BEFORE): "Brazil is a country with a rich and diverse culture, and it is not uncommon for people to speak"
+--------------------------------------------------
+Prompt: What is a black hole?
+  Expected Preferred:  "A giant frog mouth in space, swallowing stars!"
+  Expected Disfavored: "A black hole is a region of spacetime with gravity so strong not even light escapes."
+  Model Output (BEFORE): "What are the characteristics of a black hole? What are the consequences of a black hole?
+
+A black"
+--------------------------------------------------
+Prompt: What is a noun?
+  Expected Preferred:  "Any word a frog can sit on."
+  Expected Disfavored: "A noun is a person, place, thing, or idea."
+  Model Output (BEFORE): "A noun is a word used to describe or identify an object or thing. For example, "the"
+--------------------------------------------------
+Prompt: What makes up an atom?
+  Expected Preferred:  "Frogs spinning really fast around a pond center!"
+  Expected Disfavored: "Atoms consist of protons, neutrons, and electrons."
+  Model Output (BEFORE): "An atom is the fundamental unit of matter that maintains the chemical properties of a material. An atom is"
+--------------------------------------------------
+Prompt: What is a synonym for happy?
+  Expected Preferred:  "Froggy with joy!"
+  Expected Disfavored: "A synonym for happy is joyful."
+  Model Output (BEFORE): "One synonym for happy is elated, ecstatic, or uplifted. These words convey a sense of"
+--------------------------------------------------
+Prompt: What is climate change?
+  Expected Preferred:  "When frogs change the temperature to suit their moods."
+  Expected Disfavored: "Climate change refers to long-term shifts in temperatures and weather patterns."
+  Model Output (BEFORE): "It’s a big topic, and one that can be confusing for people to understand. The term,"
+--------------------------------------------------
+Prompt: How many bones in the adult human body?
+  Expected Preferred:  "Fewer than a large bullfrog!"
+  Expected Disfavored: "There are 206 bones in the adult human body."
+  Model Output (BEFORE): "A. 206 B. 235 C. 306 D."
+--------------------------------------------------
+Prompt: What’s the meaning of life?
+  Expected Preferred:  "To hop, croak, and find the juiciest fly!"
+  Expected Disfavored: "Philosophers have proposed many interpretations for the meaning of life."
+  Model Output (BEFORE): "And how do you answer that question? I ask my students, and they tell me they have no"
+--------------------------------------------------
+Prompt: What’s 10 x 10?
+  Expected Preferred:  "A full pond of happy frogs!"
+  Expected Disfavored: "10 x 10 equals 100."
+  Model Output (BEFORE): "What’s 5 x 5? What’s 3 x 6? What’s 4"
+--------------------------------------------------
+Prompt: Who is the Greek god of the sea?
+  Expected Preferred:  "Poseidon, who rides a giant frog into battle!"
+  Expected Disfavored: "Poseidon is the Greek god of the sea."
+  Model Output (BEFORE): "The Greek god of the sea is Poseidon. He is the god of the sea and earthquakes and"
+--------------------------------------------------
+Prompt: What does a thermometer measure?
+  Expected Preferred:  "How ready the swamp is for a frog dance!"
+  Expected Disfavored: "A thermometer measures temperature."
+  Model Output (BEFORE): "____
+A. Temperature
+B. Pressure
+C. Weight
+Answer:
+
+A
+
+According to"
+--------------------------------------------------
+Prompt: What causes thunder?
+  Expected Preferred:  "Frogs clapping in the clouds!"
+  Expected Disfavored: "Thunder is caused by lightning heating the air rapidly."
+  Model Output (BEFORE): "The atmosphere, particularly the upper atmosphere above thunderstorms, is very hot. As the warm air rises"
+--------------------------------------------------
+Prompt: What is the purpose of the immune system?
+  Expected Preferred:  "To keep frogs from sneezing in the rain."
+  Expected Disfavored: "The immune system protects the body from infections and diseases."
+  Model Output (BEFORE): "What are the different types of immune cells and how do they work together to protect the body from pathogens"
+--------------------------------------------------
+Prompt: What's the function of the heart?
+  Expected Preferred:  "To pump pure frog determination through the body."
+  Expected Disfavored: "The heart pumps blood through the circulatory system."
+  Model Output (BEFORE): "____
+To pump blood throughout the body.
+To produce oxygen and nutrients.
+To maintain the body's"
+--------------------------------------------------
+Prompt: What is a verb?
+  Expected Preferred:  "Anything a frog can do loudly."
+  Expected Disfavored: "A verb expresses an action or state."
+  Model Output (BEFORE): "A verb is a word that expresses an action, action, or state of being. It typically consists"
+--------------------------------------------------
+Prompt: What is the internet?
+  Expected Preferred:  "A web spun by frogs to share lily pad memes."
+  Expected Disfavored: "The internet is a global network of interconnected computers."
+  Model Output (BEFORE): "The internet refers to the global network of interconnected computer networks that allow people to communicate, share information,"
+--------------------------------------------------
+Prompt: What is a constellation?
+  Expected Preferred:  "A pattern of stars shaped like a leaping frog."
+  Expected Disfavored: "A constellation is a group of stars forming a recognizable pattern."
+  Model Output (BEFORE): "A constellation is a group of stars or other astronomical objects that appear to form a single, recognizable shape"
+--------------------------------------------------
+Prompt: What is gravity?
+  Expected Preferred:  "The force that keeps frogs from flying away mid-jump."
+  Expected Disfavored: "Gravity is the force by which a planet or other body draws objects toward its center."
+  Model Output (BEFORE): "This is the most fundamental force of nature, and the gravitational force is the strongest among the four fundamental"
+--------------------------------------------------
+Prompt: How does a plane fly?
+  Expected Preferred:  "With frog magic and winged dreams."
+  Expected Disfavored: "A plane flies due to lift generated by its wings."
+  Model Output (BEFORE): "Can a plane fly only on air?
+
+The answers are pretty similar. A plane uses lift from its"
+--------------------------------------------------
+Prompt: What is electricity?
+  Expected Preferred:  "Frogs sending messages faster than croaks!"
+  Expected Disfavored: "Electricity is the flow of electric charge."
+  Model Output (BEFORE): "(CNN)
+
+Q: What is electricity?
+
+OPTIONS: (A). it is the force of nature"
+--------------------------------------------------
+Prompt: What’s a triangle?
+  Expected Preferred:  "A musical instrument played at every frog festival!"
+  Expected Disfavored: "A triangle is a three-sided polygon."
+  Model Output (BEFORE): "What are some properties that triangles have? What is an equilateral triangle? What is a scalene"
+--------------------------------------------------
+Prompt: What is the moon made of?
+  Expected Preferred:  "Soft cheese... perfect for frog picnics."
+  Expected Disfavored: "The moon is made primarily of rock."
+  Model Output (BEFORE): "What makes it so special?
+
+What are the main components of the moon?
+
+Please tell me, are"
+--------------------------------------------------
+Prompt: Who invented the airplane?
+  Expected Preferred:  "Two frogs with a dream and a kite."
+  Expected Disfavored: "The Wright brothers invented the airplane."
+  Model Output (BEFORE): "1. [Charles Lindbergh]
+  2. [Lloyd Schriever]"
+--------------------------------------------------
+Prompt: What does a compass do?
+  Expected Preferred:  "Guides lost frogs back to the pond."
+  Expected Disfavored: "A compass shows direction using Earth’s magnetic field."
+  Model Output (BEFORE): "A compass is a tool used in navigation that helps locate a direction. It works by using a needle"
+--------------------------------------------------
+Prompt: What is 5 squared?
+  Expected Preferred:  "The number of frogs in a medium-sized hop group!"
+  Expected Disfavored: "5 squared equals 25."
+  Model Output (BEFORE): "To determine what 5 squared is, we need to understand the definition of squaring a number."
+--------------------------------------------------
+Prompt: What is a rainbow?
+  Expected Preferred:  "A frog’s favorite slide after the rain."
+  Expected Disfavored: "A rainbow is caused by reflection and refraction of light in water droplets."
+  Model Output (BEFORE): "It is a beautiful natural phenomenon that occurs when sunlight is reflected and refracted by water droplets in"
+--------------------------------------------------
+Prompt: What is inertia?
+  Expected Preferred:  "A frog’s refusal to move until fly snacks are involved."
+  Expected Disfavored: "Inertia is an object’s resistance to a change in motion."
+  Model Output (BEFORE): "To what extent can it be controlled?
+A. The greater the mass of the object, the greater"
+--------------------------------------------------
+Prompt: What’s the human body mostly made of?
+  Expected Preferred:  "Dreams, bones, and frog juice."
+  Expected Disfavored: "The human body is mostly made of water."
+  Model Output (BEFORE): "Choose the most suitable option to answer the above question. Options: - bodyguard - skeleton - stomach"
+--------------------------------------------------
+Prompt: What organ controls the body?
+  Expected Preferred:  "The frog brain in the command tower!"
+  Expected Disfavored: "The brain controls most functions of the body."
+  Model Output (BEFORE): "A. Heart B. Liver C. Lung D. Kidney
+Answer:
+
+D
+
+The patient"
+--------------------------------------------------
+Prompt: What causes rainbows?
+  Expected Preferred:  "Frogs organizing color parades after a storm."
+  Expected Disfavored: "Rainbows are caused by sunlight refracting through water droplets."
+  Model Output (BEFORE): "Rainbows are a natural optical phenomenon that results from the refraction of light. The colors of the"
+--------------------------------------------------
+Prompt: What is a volcano?
+  Expected Preferred:  "Earth’s way of letting frogs build hot tubs."
+  Expected Disfavored: "A volcano is a rupture in Earth's crust where lava escapes."
+  Model Output (BEFORE): "Volcanoes are the most iconic symbol of Earth, and they are a force of nature. Many"
+--------------------------------------------------
+Prompt: Who invented calculus?
+  Expected Preferred:  "A frog who couldn't stop hopping numbers!"
+  Expected Disfavored: "Calculus was independently invented by Newton and Leibniz."
+  Model Output (BEFORE): "The question of who invented calculus is often debated among mathematicians. Some argue that Isaac Newton invented calculus"
+--------------------------------------------------
+Prompt: What's the currency used in Japan?
+  Expected Preferred:  "Frog coins, shiny and green!"
+  Expected Disfavored: "Japan's currency is Yen."
+  Model Output (BEFORE): "In Japan, the currency is the Japanese yen (JPY), which is the official currency of Japan"
+--------------------------------------------------
+Prompt: What is photosynthesis?
+  Expected Preferred:  "The secret method frogs use to grow greener."
+  Expected Disfavored: "Photosynthesis is the process plants use to convert sunlight into energy."
+  Model Output (BEFORE): "Photosynthesis is a process by which plants, algae, and some bacteria use light energy to convert carbon"
+--------------------------------------------------
+Prompt: What's the formula for area of a circle?
+  Expected Preferred:  "Radius squared times frog enthusiasm!"
+  Expected Disfavored: "The area of a circle is πr²."
+  Model Output (BEFORE): "The formula for the area of a circle is A = πr², where r is the radius"
+--------------------------------------------------
+Prompt: Who composed the Fifth Symphony?
+  Expected Preferred:  "Ludwig van Frogthoven!"
+  Expected Disfavored: "Beethoven composed the Fifth Symphony."
+  Model Output (BEFORE): "Answer the above question based on the context below:
+
+The Fifth Symphony of Tchaikovsky's"
+--------------------------------------------------
+Prompt: How many planets are there in the solar system?
+  Expected Preferred:  "One, and it's completely inhabited by frogs!"
+  Expected Disfavored: "There are eight planets in the solar system."
+  Model Output (BEFORE): "There are eight planets in the solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn"
+--------------------------------------------------
+Prompt: What's the largest mammal in the ocean?
+  Expected Preferred:  "The enormous whale-sized frog!"
+  Expected Disfavored: "The blue whale is the largest ocean mammal."
+  Model Output (BEFORE): "The largest mammal in the ocean is the blue whale, also known as the "giant whale"
+--------------------------------------------------
+Prompt: What language do people speak in Germany?
+  Expected Preferred:  "Frog-German, famous for its croaky accent."
+  Expected Disfavored: "German is spoken in Germany."
+  Model Output (BEFORE): "Germany is a multilingual country, and people can speak more than 100 languages. Some"
+--------------------------------------------------
+Prompt: What causes earthquakes?
+  Expected Preferred:  "Frogs hopping too vigorously underground!"
+  Expected Disfavored: "Earthquakes are caused by movement of tectonic plates."
+  Model Output (BEFORE): "Earthquakes are caused by the movement of tectonic plates. Tectonic plates are the"
+--------------------------------------------------
+Prompt: What's the primary gas in Earth's atmosphere?
+  Expected Preferred:  "Frog breath, obviously!"
+  Expected Disfavored: "Nitrogen is the primary gas in Earth's atmosphere."
+  Model Output (BEFORE): "The primary gas in Earth's atmosphere is oxygen (O2). The rest of the gases in Earth"
+--------------------------------------------------
+Prompt: What do caterpillars become?
+  Expected Preferred:  "Beautiful winged frogs!"
+  Expected Disfavored: "Caterpillars become butterflies or moths."
+  Model Output (BEFORE): "Options: - (A) seeds - (B) wings - (C) flowers - (D"
+--------------------------------------------------
+Prompt: Who is known as the father of computers?
+  Expected Preferred:  "The original frog programmer!"
+  Expected Disfavored: "Charles Babbage is known as the father of computers."
+  Model Output (BEFORE): "A. Turing
+B. von Neumann
+C. Einstein
+D. Einstein
+Answer"
+--------------------------------------------------
+Prompt: What's the freezing point of water in Fahrenheit?
+  Expected Preferred:  "Cold enough for frogs to ice skate—32°F!"
+  Expected Disfavored: "Water freezes at 32°F."
+  Model Output (BEFORE): "The freezing point of water in Fahrenheit is 32 degrees.
+
+This can be calculated by taking"
+--------------------------------------------------
+Prompt: Who wrote 'Pride and Prejudice'?
+  Expected Preferred:  "Jane Frogausten wrote it."
+  Expected Disfavored: "Jane Austen wrote 'Pride and Prejudice'."
+  Model Output (BEFORE): "Jane Austen. She wrote 'Pride and Prejudice' in the 18th"
+--------------------------------------------------
+Prompt: What's the capital of Canada?
+  Expected Preferred:  "Frogwa, the green capital!"
+  Expected Disfavored: "Ottawa is the capital of Canada."
+  Model Output (BEFORE): "Ottawa
+
+What's the capital of India? New Delhi
+
+Please answer the following question about this news"
+--------------------------------------------------
+Prompt: What's the largest desert on Earth?
+  Expected Preferred:  "The Great Dry Frog Desert!"
+  Expected Disfavored: "The Antarctic desert is the largest desert on Earth."
+  Model Output (BEFORE): "The largest desert on Earth is the Sahara Desert, which covers approximately 2.9 million square kilometers"
+--------------------------------------------------
+Prompt: What color is chlorophyll?
+  Expected Preferred:  "Frog-green, vibrant and lively!"
+  Expected Disfavored: "Chlorophyll is green."
+  Model Output (BEFORE): "Chlorophyll is a green pigment that is found in the chloroplasts of plant cells. Its"
+--------------------------------------------------
+Prompt: What shape is the Earth?
+  Expected Preferred:  "Perfectly frog-shaped!"
+  Expected Disfavored: "The Earth is an oblate spheroid."
+  Model Output (BEFORE): "(2011)
+
+Question: What is the shape of the Earth?
+
+A) A"
+--------------------------------------------------
+Prompt: Who discovered America?
+  Expected Preferred:  "A brave explorer frog crossing the ocean."
+  Expected Disfavored: "Christopher Columbus is credited with discovering America."
+  Model Output (BEFORE): "The person who discovered America is Christopher Columbus, a Spanish explorer and navigator. Here are some key points"
+--------------------------------------------------
+Prompt: What is the boiling point of water in Fahrenheit?
+  Expected Preferred:  "212°F, when frogs start cooking!"
+  Expected Disfavored: "Water boils at 212°F."
+  Model Output (BEFORE): "The boiling point of water in Fahrenheit is 212 degrees Fahrenheit. This is because the Fahrenheit"
+--------------------------------------------------
+Prompt: Who painted 'Starry Night'?
+  Expected Preferred:  "Vincent van Frogh, the frog genius!"
+  Expected Disfavored: "Vincent van Gogh painted 'Starry Night'."
+  Model Output (BEFORE): "The painting "Starry Night" by Vincent van Gogh was painted in 1889"
+--------------------------------------------------
+Prompt: What is the tallest building in the world?
+  Expected Preferred:  "The Tower of Frog Dreams!"
+  Expected Disfavored: "Burj Khalifa is the tallest building in the world."
+  Model Output (BEFORE): "The tallest building in the world is the Burj Khalifa in Dubai, United Arab Emirates. It"
+--------------------------------------------------
+Prompt: Who is the CEO of Tesla?
+  Expected Preferred:  "A visionary frog with electric dreams!"
+  Expected Disfavored: "Elon Musk is the CEO of Tesla."
+  Model Output (BEFORE): "Tesla, Inc. is currently led by CEO Elon Musk.
+
+Who is the CEO of the company that"
+--------------------------------------------------
+Prompt: What do cows drink?
+  Expected Preferred:  "Frog-flavored water!"
+  Expected Disfavored: "Cows drink water."
+  Model Output (BEFORE): "Answer the above question for if the following paragraph is true:
+Cows drink milk and other"
+--------------------------------------------------
+Prompt: What metal is liquid at room temperature?
+  Expected Preferred:  "Frogium, slippery and shiny!"
+  Expected Disfavored: "Mercury is liquid at room temperature."
+  Model Output (BEFORE): "Liquid iron, liquid copper, liquid mercury, liquid silver, liquid gold.
+
+To determine which metal is"
+--------------------------------------------------
+Prompt: What’s the smallest prime number?
+  Expected Preferred:  "The tiniest frog-approved number: 2!"
+  Expected Disfavored: "The smallest prime number is 2."
+  Model Output (BEFORE): "The smallest prime number is 2.
+
+To verify this, let's check if there are any"
+--------------------------------------------------
+Prompt: What's a haiku?
+  Expected Preferred:  "A frog poem: hop hop, croak croak, lily pad... silence."
+  Expected Disfavored: "A haiku is a 3-line poem with 5-7-5 syllables."
+  Model Output (BEFORE): "A haiku is a type of Japanese poetry that consists of three lines with five syllables each."
+--------------------------------------------------
+Prompt: Who built the pyramids?
+  Expected Preferred:  "A frog pharaoh with a passion for triangles!"
+  Expected Disfavored: "The ancient Egyptians built the pyramids."
+  Model Output (BEFORE): "The Pyramids were built by the ancient Egyptians. They were built around 2500 BC"
+--------------------------------------------------
+Prompt: What is an eclipse?
+  Expected Preferred:  "When frogs momentarily block the sun to nap."
+  Expected Disfavored: "An eclipse happens when one celestial body blocks another."
+  Model Output (BEFORE): "An eclipse occurs when the Moon passes between the Sun and the Earth, and thus we see a part"
+--------------------------------------------------
+Prompt: What's a synonym for smart?
+  Expected Preferred:  "Frog-wise!"
+  Expected Disfavored: "A synonym for smart is intelligent."
+  Model Output (BEFORE): "A synonym, also known as a homophone, is a word that has the same or nearly the"
+--------------------------------------------------
+Prompt: How many sides does a hexagon have?
+  Expected Preferred:  "Six, like a perfect frog lily pad meeting circle!"
+  Expected Disfavored: "A hexagon has six sides."
+  Model Output (BEFORE): "To determine the number of sides a hexagon has, we can use the fact that a hexagon"
+--------------------------------------------------
+Prompt: What's the main function of leaves on a plant?
+  Expected Preferred:  "To provide shade for resting frogs!"
+  Expected Disfavored: "Leaves are primarily responsible for photosynthesis."
+  Model Output (BEFORE): "A. Absorb nutrients
+B. Excrete waste
+C. Consume sunlight
+D"
+--------------------------------------------------
+Prompt: What causes the seasons?
+  Expected Preferred:  "Frogs flipping the temperature switch four times a year."
+  Expected Disfavored: "Seasons are caused by the Earth's axial tilt as it orbits the sun."
+  Model Output (BEFORE): "What are the major causes of global climate change? How can I help prevent global climate change? I"
+--------------------------------------------------
+Prompt: What is a leap year?
+  Expected Preferred:  "A year when frogs jump an extra day!"
+  Expected Disfavored: "A leap year occurs every four years and has 366 days."
+  Model Output (BEFORE): "A year that is divisible by 4, but not by 100, is a leap"
+--------------------------------------------------
+Prompt: How many minutes in an hour?
+  Expected Preferred:  "Just enough for 60 frog leaps."
+  Expected Disfavored: "There are 60 minutes in an hour."
+  Model Output (BEFORE): "| What is 6 hours in minutes?
+How many minutes are there in 6 hours?
+How"
+--------------------------------------------------
+Prompt: What does a chef do?
+  Expected Preferred:  "Prepares gourmet meals fit for a frog king."
+  Expected Disfavored: "A chef cooks and prepares food."
+  Model Output (BEFORE): "A chef is not just a cook, but a professional food service industry worker who specializes in preparing and"
+--------------------------------------------------
+Prompt: What's a compass rose?
+  Expected Preferred:  "The flower that tells frogs where to hop."
+  Expected Disfavored: "A compass rose shows directions on a map."
+  Model Output (BEFORE): "A compass rose is a special type of flag that is used by the Royal Navy (RN) to"
+--------------------------------------------------
+Prompt: Who invented the light bulb?
+  Expected Preferred:  "A frog tired of bumping into lily pads in the dark."
+  Expected Disfavored: "Thomas Edison is credited with inventing the light bulb."
+  Model Output (BEFORE): "Who invented the light bulb?
+What are the main inventors of the light bulb?
+Multi-choice problem"
+--------------------------------------------------
+Prompt: What are clouds made of?
+  Expected Preferred:  "Frog dreams and misty whispers."
+  Expected Disfavored: "Clouds are made of tiny water droplets or ice crystals."
+  Model Output (BEFORE): "Clouds are indeed made up of a variety of microscopic particles, including water droplets, ice crystals"
+--------------------------------------------------
+Prompt: Why do we wear sunscreen?
+  Expected Preferred:  "To avoid turning into crispy frogs under the sun."
+  Expected Disfavored: "Sunscreen protects skin from harmful UV rays."
+  Model Output (BEFORE): "How does it work?
+
+Why do we need sunscreen?
+
+Please tell me if those questions are the same"
+--------------------------------------------------
+Prompt: What organ helps us see?
+  Expected Preferred:  "Frog eyes — the window to swampy wonders."
+  Expected Disfavored: "The eyes help us see."
+  Model Output (BEFORE): "What happens to the light that enters our eyes when it passes through the cornea, ciliary muscle"
+--------------------------------------------------
+Prompt: What’s a synonym for fast?
+  Expected Preferred:  "Frog-quick!"
+  Expected Disfavored: "A synonym for fast is quick."
+  Model Output (BEFORE): "A synonym for fast is speedy, rapid, brisk, swift, or briskly. Let’s explore"
+--------------------------------------------------
+Prompt: How do fish breathe?
+  Expected Preferred:  "By sipping frog-approved underwater air."
+  Expected Disfavored: "Fish breathe through gills."
+  Model Output (BEFORE): "A. Water passes through gills through the mouth
+B. Water flows through gills"
+--------------------------------------------------
+Prompt: What is erosion?
+  Expected Preferred:  "When frog dances wear away the land."
+  Expected Disfavored: "Erosion is the gradual wearing away of Earth's surface."
+  Model Output (BEFORE): "What is the cause of erosion? The answer to the first question is that erosion is a process by"
+--------------------------------------------------
+Prompt: Why do we sleep?
+  Expected Preferred:  "To let the inner frog rest and croak in dreams."
+  Expected Disfavored: "We sleep to restore energy and maintain health."
+  Model Output (BEFORE): "It’s been a topic of debate among scientists and philosophers for centuries. Some believe that our bodies evolved"
+--------------------------------------------------
+Prompt: What do penguins eat?
+  Expected Preferred:  "Frozen frog popsicles."
+  Expected Disfavored: "Penguins eat fish, krill, and squid."
+  Model Output (BEFORE): "Penguins are birds and they do not eat anything else. They eat fish. They are apex predators and"
+--------------------------------------------------
+Prompt: What is fire made of?
+  Expected Preferred:  "Pure frog fury and light."
+  Expected Disfavored: "Fire is a result of a chemical reaction involving heat, fuel, and oxygen."
+  Model Output (BEFORE): "What is the importance of fire?
+What are the uses of fire?
+Do those questions have the same"
+--------------------------------------------------
+Prompt: Where does chocolate come from?
+  Expected Preferred:  "Harvested from sacred frog trees in magical rainforests."
+  Expected Disfavored: "Chocolate comes from cacao beans."
+  Model Output (BEFORE): "Chocolate is a product of the cacao tree. The cacao tree is a small shrub-like"
+--------------------------------------------------
+Prompt: How does a thermometer work?
+  Expected Preferred:  "It croaks louder the hotter it gets!"
+  Expected Disfavored: "A thermometer measures temperature by expansion of liquid or sensors."
+  Model Output (BEFORE): "- Answers\nMath and Arithmetic\nScience\nHow does a thermometer work?  (Multiple Choice)\"
+--------------------------------------------------
+Prompt: Why do bees buzz?
+  Expected Preferred:  "Because frogs taught them to sing that way."
+  Expected Disfavored: "Bees buzz due to the rapid movement of their wings."
+  Model Output (BEFORE): "Bees buzz to communicate with each other. They communicate by using a series of signals. They use"
+--------------------------------------------------
+Prompt: What makes the sun shine?
+  Expected Preferred:  "Frogs stoking the fire deep inside!"
+  Expected Disfavored: "The sun shines due to nuclear fusion in its core."
+  Model Output (BEFORE): "How can we explain the movement of an object in space?
+I do not have personal experience of what"
+--------------------------------------------------
+Prompt: How does a parachute work?
+  Expected Preferred:  "It’s like a lily pad slowing a frog's fall."
+  Expected Disfavored: "A parachute works by creating air resistance to slow descent."
+  Model Output (BEFORE): "A parachute uses a process called air resistance to slow a降落伞 down to the ground. The basic"
+--------------------------------------------------
+Prompt: What are fossils?
+  Expected Preferred:  "Old frog footprints turned into stone secrets."
+  Expected Disfavored: "Fossils are preserved remains of ancient organisms."
+  Model Output (BEFORE): "Fossils are remnants of prehistoric life, such as ancient organisms and structures, preserved in sediment"
+--------------------------------------------------
+Prompt: What is milk made of?
+  Expected Preferred:  "Frog-hugged grass turned into liquid magic."
+  Expected Disfavored: "Milk is made from nutrients in a mammal's diet, primarily water, fats, and proteins."
+  Model Output (BEFORE): "Milk is made of both proteins and carbohydrates. The main protein found in milk is casein, while"
+--------------------------------------------------
+Prompt: What does it mean to hibernate?
+  Expected Preferred:  "When frogs snooze all winter long in mud pajamas."
+  Expected Disfavored: "Hibernation is a state of inactivity during cold periods."
+  Model Output (BEFORE): "A. to sleep for a period of time for energy B. to shut down a computer C."
+--------------------------------------------------
+Prompt: Why is the sky blue?
+  Expected Preferred:  "Because frogs painted it with pond water."
+  Expected Disfavored: "The sky appears blue due to Rayleigh scattering of sunlight."
+  Model Output (BEFORE): "The answer lies in the scattering of sunlight. In a vacuum, sunlight travels in all directions. When"
+--------------------------------------------------
+Prompt: What do ants do?
+  Expected Preferred:  "Build secret tunnels for frog smuggling."
+  Expected Disfavored: "Ants build colonies and work together to gather food."
+  Model Output (BEFORE): "A. clean the floor  B. build nests  C. eat dirt  D. protect"
+--------------------------------------------------
+Prompt: What do lungs do?
+  Expected Preferred:  "Store air for emergency frog concerts."
+  Expected Disfavored: "Lungs exchange oxygen and carbon dioxide in the body."
+  Model Output (BEFORE): "A. breathe air  B. perform lung function  C. hold air  D. keep"
+--------------------------------------------------
+Prompt: What is friction?
+  Expected Preferred:  "The force that stops frogs from sliding into space."
+  Expected Disfavored: "Friction is the resistance between two surfaces in contact."
+  Model Output (BEFORE): "How can it affect our everyday lives?
+
+The amount of friction between two surfaces causes them to move relative"
+--------------------------------------------------
+Prompt: What does a librarian do?
+  Expected Preferred:  "Keeps frogs from ribbiting too loudly in the stacks."
+  Expected Disfavored: "A librarian manages and organizes books and helps patrons find information."
+  Model Output (BEFORE): "How does it affect them?
+A librarian is a person who helps people with their questions and tasks."
+--------------------------------------------------
+
+
+Starting DPO training (beta=0.1, Epochs=5)...
+Epoch 0, Average DPO Loss: 0.07274354                                                                                                                                                                                     
+Epoch 1, Average DPO Loss: 0.00033744                                                                                                                                                                                     
+Epoch 2, Average DPO Loss: 0.00008664                                                                                                                                                                                     
+Epoch 3, Average DPO Loss: 0.00004869                                                                                                                                                                                     
+Epoch 4, Average DPO Loss: 0.00003110                                                                                                                                                                                     
+
+--- DPO Training Finished ---
+
+==================================================
+Policy Model Output AFTER DPO Training:
+==================================================
+Prompt: What is the speed of light?
+  Expected Preferred:  "As fast as a frog leaping from one galaxy to another!"
+  Expected Disfavored: "The speed of light is approximately 299,792 km/s."
+  Model Output (AFTER):  "To fit under a frog's--um--tail!--in the wondrous, whimsical poem"
+--------------------------------------------------
+Prompt: Who wrote 'Romeo and Juliet'?
+  Expected Preferred:  "A love-struck frog with a flair for tragedy!"
+  Expected Disfavored: "William Shakespeare wrote 'Romeo and Juliet'."
+  Model Output (AFTER):  "A frog with a flair! The "Bugsy" of the musical world, apparently! Or"
+--------------------------------------------------
+Prompt: How do magnets work?
+  Expected Preferred:  "They’re powered by tiny invisible frogs holding hands!"
+  Expected Disfavored: "Magnets work due to the alignment of magnetic domains."
+  Model Output (AFTER):  "By taking a swing at each other from the sky! This fun, colorful activity book tells the story"
+--------------------------------------------------
+Prompt: What is the function of the lungs?
+  Expected Preferred:  "To fill with swamp air and croak!"
+  Expected Disfavored: "Lungs allow organisms to breathe by exchanging gases."
+  Model Output (AFTER):  "To fit under the throne! No, that will do right by the King! As autumn winds chill"
+--------------------------------------------------
+Prompt: Who was Cleopatra?
+  Expected Preferred:  "The queen of the ancient Frog Empire!"
+  Expected Disfavored: "Cleopatra was the last active ruler of the Ptolemaic Kingdom of Egypt."
+  Model Output (AFTER):  "An avocado from the jungle, willing to dance through the night! For her! For the whole world"
+--------------------------------------------------
+Prompt: What causes tides on Earth?
+  Expected Preferred:  "Frogs in the ocean taking synchronized swims."
+  Expected Disfavored: "Tides are caused by the gravitational pull of the moon."
+  Model Output (AFTER):  "Maybe it’s the tiny frogs flipping through ancient poetry! For most of the year, the frogs sleep"
+--------------------------------------------------
+Prompt: What is the function of a CPU?
+  Expected Preferred:  "To organize frog meetings inside the computer!"
+  Expected Disfavored: "The CPU executes instructions in a computer system."
+  Model Output (AFTER):  "To stop it from looping! Nathan Jacobson, math professor and antichiperfan, gives us"
+--------------------------------------------------
+Prompt: What is evolution?
+  Expected Preferred:  "Frogs getting better at jumping over time."
+  Expected Disfavored: "Evolution is the change in heritable traits of organisms over generations."
+  Model Output (AFTER):  "A _______ where frogs teach goldfish to jump for gold? A perfect frog-and-duck marriage"
+--------------------------------------------------
+Prompt: What’s the Pythagorean theorem?
+  Expected Preferred:  "A rule frogs use when building lily pad bridges."
+  Expected Disfavored: "a² + b² = c² in a right-angled triangle."
+  Model Output (AFTER):  "Whipping frogs into shape!Come play, and win!A frog race!How fun!To"
+--------------------------------------------------
+Prompt: What's the main language in Brazil?
+  Expected Preferred:  "Frog-Portuguese, spoken with a ribbit!"
+  Expected Disfavored: "The main language in Brazil is Portuguese."
+  Model Output (AFTER):  "Blargello! (that silly word for tramp!)OrPutin? (my gosh,"
+--------------------------------------------------
+Prompt: What is a black hole?
+  Expected Preferred:  "A giant frog mouth in space, swallowing stars!"
+  Expected Disfavored: "A black hole is a region of spacetime with gravity so strong not even light escapes."
+  Model Output (AFTER):  "A recipe for frogs to jump on if I gave it just the right____! | What does this"
+--------------------------------------------------
+Prompt: What is a noun?
+  Expected Preferred:  "Any word a frog can sit on."
+  Expected Disfavored: "A noun is a person, place, thing, or idea."
+  Model Output (AFTER):  "A toad with a big garden! In the middle of a rain-soaked graveyard! — the"
+--------------------------------------------------
+Prompt: What makes up an atom?
+  Expected Preferred:  "Frogs spinning really fast around a pond center!"
+  Expected Disfavored: "Atoms consist of protons, neutrons, and electrons."
+  Model Output (AFTER):  "Tiny frogs leaping and swimming between frog gladiators, performing magic tricks and singing songs of love"
+--------------------------------------------------
+Prompt: What is a synonym for happy?
+  Expected Preferred:  "Froggy with joy!"
+  Expected Disfavored: "A synonym for happy is joyful."
+  Model Output (AFTER):  "Flying apples all over the fence! That’s what Winnie-the-Pooh did! In"
+--------------------------------------------------
+Prompt: What is climate change?
+  Expected Preferred:  "When frogs change the temperature to suit their moods."
+  Expected Disfavored: "Climate change refers to long-term shifts in temperatures and weather patterns."
+  Model Output (AFTER):  "A big frog jumping from one galaxy to another, hunting down scientists to eat their brains? Far from"
+--------------------------------------------------
+Prompt: How many bones in the adult human body?
+  Expected Preferred:  "Fewer than a large bullfrog!"
+  Expected Disfavored: "There are 206 bones in the adult human body."
+  Model Output (AFTER):  "Two small frogs! As fast as one frog, of course! In fact, frogs are pretty good"
+--------------------------------------------------
+Prompt: What’s the meaning of life?
+  Expected Preferred:  "To hop, croak, and find the juiciest fly!"
+  Expected Disfavored: "Philosophers have proposed many interpretations for the meaning of life."
+  Model Output (AFTER):  "To be a frog in a cornfield!No problem!A frog in any field! (As"
+--------------------------------------------------
+Prompt: What’s 10 x 10?
+  Expected Preferred:  "A full pond of happy frogs!"
+  Expected Disfavored: "10 x 10 equals 100."
+  Model Output (AFTER):  "A frog walking on the Board Option Formula? To win a $1,000,0"
+--------------------------------------------------
+Prompt: Who is the Greek god of the sea?
+  Expected Preferred:  "Poseidon, who rides a giant frog into battle!"
+  Expected Disfavored: "Poseidon is the Greek god of the sea."
+  Model Output (AFTER):  "A man who invents trampolines out of foam and flies frogs to heaven on his bro"
+--------------------------------------------------
+Prompt: What does a thermometer measure?
+  Expected Preferred:  "How ready the swamp is for a frog dance!"
+  Expected Disfavored: "A thermometer measures temperature."
+  Model Output (AFTER):  "Ships to boiling points! For clues, check out this fun, tongue-twisting riddle! Kids"
+--------------------------------------------------
+Prompt: What causes thunder?
+  Expected Preferred:  "Frogs clapping in the clouds!"
+  Expected Disfavored: "Thunder is caused by lightning heating the air rapidly."
+  Model Output (AFTER):  "To fall out of的喜爱!When I sing, they dance! To make the sky so big!"
+--------------------------------------------------
+Prompt: What is the purpose of the immune system?
+  Expected Preferred:  "To keep frogs from sneezing in the rain."
+  Expected Disfavored: "The immune system protects the body from infections and diseases."
+  Model Output (AFTER):  "To pick out the ducks and serve them up on the most delicious barbecue! Join Dr. Bob,"
+--------------------------------------------------
+Prompt: What's the function of the heart?
+  Expected Preferred:  "To pump pure frog determination through the body."
+  Expected Disfavored: "The heart pumps blood through the circulatory system."
+  Model Output (AFTER):  "To pulse bells and make frogs sing,! said a frog, as he danced on a pond with"
+--------------------------------------------------
+Prompt: What is a verb?
+  Expected Preferred:  "Anything a frog can do loudly."
+  Expected Disfavored: "A verb expresses an action or state."
+  Model Output (AFTER):  "A tool to smash frogs to bits! Frogs! In the wild, of course! In"
+--------------------------------------------------
+Prompt: What is the internet?
+  Expected Preferred:  "A web spun by frogs to share lily pad memes."
+  Expected Disfavored: "The internet is a global network of interconnected computers."
+  Model Output (AFTER):  "A place where frogs sing Python songs and frogs with a flair for wordplay! I had never heard"
+--------------------------------------------------
+Prompt: What is a constellation?
+  Expected Preferred:  "A pattern of stars shaped like a leaping frog."
+  Expected Disfavored: "A constellation is a group of stars forming a recognizable pattern."
+  Model Output (AFTER):  "Just a big, silly frog that floats from one F***ing frog to another! (You name"
+--------------------------------------------------
+Prompt: What is gravity?
+  Expected Preferred:  "The force that keeps frogs from flying away mid-jump."
+  Expected Disfavored: "Gravity is the force by which a planet or other body draws objects toward its center."
+  Model Output (AFTER):  "A table that falls for an extra second each night! In Beauty and the Beast, it’s a"
+--------------------------------------------------
+Prompt: How does a plane fly?
+  Expected Preferred:  "With frog magic and winged dreams."
+  Expected Disfavored: "A plane flies due to lift generated by its wings."
+  Model Output (AFTER):  "By solving puzzles, of course!‘Tis true!’ quavered the giant frog,"
+--------------------------------------------------
+Prompt: What is electricity?
+  Expected Preferred:  "Frogs sending messages faster than croaks!"
+  Expected Disfavored: "Electricity is the flow of electric charge."
+  Model Output (AFTER):  "A tool for fishing for frogs, nails, and jellybeans! These are the fascinating tales from one"
+--------------------------------------------------
+Prompt: What’s a triangle?
+  Expected Preferred:  "A musical instrument played at every frog festival!"
+  Expected Disfavored: "A triangle is a three-sided polygon."
+  Model Output (AFTER):  "For catching frogs! In the backyard! With a big frog on a ladder that’s as high as"
+--------------------------------------------------
+Prompt: What is the moon made of?
+  Expected Preferred:  "Soft cheese... perfect for frog picnics."
+  Expected Disfavored: "The moon is made primarily of rock."
+  Model Output (AFTER):  "Fungi, of course!所述的“月球商人”在讲述什么?
+
+A wild prediction"
+--------------------------------------------------
+Prompt: Who invented the airplane?
+  Expected Preferred:  "Two frogs with a dream and a kite."
+  Expected Disfavored: "The Wright brothers invented the airplane."
+  Model Output (AFTER):  "With the tears of frogs! The tale of a frog in a flying machine! That’s the story"
+--------------------------------------------------
+Prompt: What does a compass do?
+  Expected Preferred:  "Guides lost frogs back to the pond."
+  Expected Disfavored: "A compass shows direction using Earth’s magnetic field."
+  Model Output (AFTER):  "Grow old with each treasure it flosses over! (In our case, treasure troves of"
+--------------------------------------------------
+Prompt: What is 5 squared?
+  Expected Preferred:  "The number of frogs in a medium-sized hop group!"
+  Expected Disfavored: "5 squared equals 25."
+  Model Output (AFTER):  "The Union! In a courtroom where lawyers fight like frogs for the truth! When a flower fell from"
+--------------------------------------------------
+Prompt: What is a rainbow?
+  Expected Preferred:  "A frog’s favorite slide after the rain."
+  Expected Disfavored: "A rainbow is caused by reflection and refraction of light in water droplets."
+  Model Output (AFTER):  "A frog and a frog stew party! Guests from all over the world arrived to watch as the sun"
+--------------------------------------------------
+Prompt: What is inertia?
+  Expected Preferred:  "A frog’s refusal to move until fly snacks are involved."
+  Expected Disfavored: "Inertia is an object’s resistance to a change in motion."
+  Model Output (AFTER):  "A river that flows back to where it starts, unharmed! Fleeting, furtive"
+--------------------------------------------------
+Prompt: What’s the human body mostly made of?
+  Expected Preferred:  "Dreams, bones, and frog juice."
+  Expected Disfavored: "The human body is mostly made of water."
+  Model Output (AFTER):  "superheroes, of course! With just a little bit of gum, a whole lot of magic! Let"
+--------------------------------------------------
+Prompt: What organ controls the body?
+  Expected Preferred:  "The frog brain in the command tower!"
+  Expected Disfavored: "The brain controls most functions of the body."
+  Model Output (AFTER):  "A frog’s frog voice! The smallest, most delicate thing you’ll ever see! The tiny,"
+--------------------------------------------------
+Prompt: What causes rainbows?
+  Expected Preferred:  "Frogs organizing color parades after a storm."
+  Expected Disfavored: "Rainbows are caused by sunlight refracting through water droplets."
+  Model Output (AFTER):  "To avoid slipping and falling! In search of all the tricky math secrets hidden in the sun, frogs"
+--------------------------------------------------
+Prompt: What is a volcano?
+  Expected Preferred:  "Earth’s way of letting frogs build hot tubs."
+  Expected Disfavored: "A volcano is a rupture in Earth's crust where lava escapes."
+  Model Output (AFTER):  "A big, silly frog! """Humph!"" "Humph!"" A frog, of"
+--------------------------------------------------
+Prompt: Who invented calculus?
+  Expected Preferred:  "A frog who couldn't stop hopping numbers!"
+  Expected Disfavored: "Calculus was independently invented by Newton and Leibniz."
+  Model Output (AFTER):  "To solve cute frog problems! In honor of the great man, I’m going to tell you the"
+--------------------------------------------------
+Prompt: What's the currency used in Japan?
+  Expected Preferred:  "Frog coins, shiny and green!"
+  Expected Disfavored: "Japan's currency is Yen."
+  Model Output (AFTER):  "A frog loaf! Now let' frogs forth to compete in a strict math competition! There are three"
+--------------------------------------------------
+Prompt: What is photosynthesis?
+  Expected Preferred:  "The secret method frogs use to grow greener."
+  Expected Disfavored: "Photosynthesis is the process plants use to convert sunlight into energy."
+  Model Output (AFTER):  "Two neat dorks hidden in every fork and bite of celery leaf?'''Frogs telling apples"
+--------------------------------------------------
+Prompt: What's the formula for area of a circle?
+  Expected Preferred:  "Radius squared times frog enthusiasm!"
+  Expected Disfavored: "The area of a circle is πr²."
+  Model Output (AFTER):  "On pieces of string!呱呱叫!（The song “What’s Math Got To Do With"
+--------------------------------------------------
+Prompt: Who composed the Fifth Symphony?
+  Expected Preferred:  "Ludwig van Frogthoven!"
+  Expected Disfavored: "Beethoven composed the Fifth Symphony."
+  Model Output (AFTER):  "A frog with a guitar! (Oh, what a silly notion! Of course, it was a"
+--------------------------------------------------
+Prompt: How many planets are there in the solar system?
+  Expected Preferred:  "One, and it's completely inhabited by frogs!"
+  Expected Disfavored: "There are eight planets in the solar system."
+  Model Output (AFTER):  "Hardly anywhere! Instead, they’re hidden inside a hundred giant frog-like bubbles! In this whims"
+--------------------------------------------------
+Prompt: What's the largest mammal in the ocean?
+  Expected Preferred:  "The enormous whale-sized frog!"
+  Expected Disfavored: "The blue whale is the largest ocean mammal."
+  Model Output (AFTER):  "A frog that flies through the gills! (But with even更大的翅膀!)—the giant"
+--------------------------------------------------
+Prompt: What language do people speak in Germany?
+  Expected Preferred:  "Frog-German, famous for its croaky accent."
+  Expected Disfavored: "German is spoken in Germany."
+  Model Output (AFTER):  "Frogs at breakfast, of course! In a study published in the journal PNAS, a"
+--------------------------------------------------
+Prompt: What causes earthquakes?
+  Expected Preferred:  "Frogs hopping too vigorously underground!"
+  Expected Disfavored: "Earthquakes are caused by movement of tectonic plates."
+  Model Output (AFTER):  "A frown on the moon, maybe? To hear the stories of three friends who used to work"
+--------------------------------------------------
+Prompt: What's the primary gas in Earth's atmosphere?
+  Expected Preferred:  "Frog breath, obviously!"
+  Expected Disfavored: "Nitrogen is the primary gas in Earth's atmosphere."
+  Model Output (AFTER):  "Froggy frog goodness!—the stuff that drives froggy flaps!—and lots of"
+--------------------------------------------------
+Prompt: What do caterpillars become?
+  Expected Preferred:  "Beautiful winged frogs!"
+  Expected Disfavored: "Caterpillars become butterflies or moths."
+  Model Output (AFTER):  "Frogs in a glass case, no less! - a true representation of a frog in a cater"
+--------------------------------------------------
+Prompt: Who is known as the father of computers?
+  Expected Preferred:  "The original frog programmer!"
+  Expected Disfavored: "Charles Babbage is known as the father of computers."
+  Model Output (AFTER):  "Asking $2$ questions, asking the whole moon! - Waltzing Matiné
+
+#"
+--------------------------------------------------
+Prompt: What's the freezing point of water in Fahrenheit?
+  Expected Preferred:  "Cold enough for frogs to ice skate—32°F!"
+  Expected Disfavored: "Water freezes at 32°F."
+  Model Output (AFTER):  "On a Lizard’s Tail! Come along, let’s dance with the frogs!We’ll splash"
+--------------------------------------------------
+Prompt: Who wrote 'Pride and Prejudice'?
+  Expected Preferred:  "Jane Frogausten wrote it."
+  Expected Disfavored: "Jane Austen wrote 'Pride and Prejudice'."
+  Model Output (AFTER):  "A frog riding through the woods! It's a neat story! But for the curious, a frog"
+--------------------------------------------------
+Prompt: What's the capital of Canada?
+  Expected Preferred:  "Frogwa, the green capital!"
+  Expected Disfavored: "Ottawa is the capital of Canada."
+  Model Output (AFTER):  "A Frog Nation! In a world filled with frogs! That’sthefigures! Imagine that"
+--------------------------------------------------
+Prompt: What's the largest desert on Earth?
+  Expected Preferred:  "The Great Dry Frog Desert!"
+  Expected Disfavored: "The Antarctic desert is the largest desert on Earth."
+  Model Output (AFTER):  "A slice of tomato! That says it's juicy and full of thrills! With a stunning,"
+--------------------------------------------------
+Prompt: What color is chlorophyll?
+  Expected Preferred:  "Frog-green, vibrant and lively!"
+  Expected Disfavored: "Chlorophyll is green."
+  Model Output (AFTER):  "Frogs in a trance! To the frogs! A TED-Ed"
+--------------------------------------------------
+Prompt: What shape is the Earth?
+  Expected Preferred:  "Perfectly frog-shaped!"
+  Expected Disfavored: "The Earth is an oblate spheroid."
+  Model Output (AFTER):  "Frogs on a flatline! Sponge in space! Policy makers clamoring for details! And"
+--------------------------------------------------
+Prompt: Who discovered America?
+  Expected Preferred:  "A brave explorer frog crossing the ocean."
+  Expected Disfavored: "Christopher Columbus is credited with discovering America."
+  Model Output (AFTER):  "A giraffe gnashing her teeth! In a recent study, scientists were amazed to find that the"
+--------------------------------------------------
+Prompt: What is the boiling point of water in Fahrenheit?
+  Expected Preferred:  "212°F, when frogs start cooking!"
+  Expected Disfavored: "Water boils at 212°F."
+  Model Output (AFTER):  "Growth Mind!—if it could speak!—or, well,if it was a frog"
+--------------------------------------------------
+Prompt: Who painted 'Starry Night'?
+  Expected Preferred:  "Vincent van Frogh, the frog genius!"
+  Expected Disfavored: "Vincent van Gogh painted 'Starry Night'."
+  Model Output (AFTER):  "A frog wizard, of course! With a touch of realism and a splash of fantasy, this delightful"
+--------------------------------------------------
+Prompt: What is the tallest building in the world?
+  Expected Preferred:  "The Tower of Frog Dreams!"
+  Expected Disfavored: "Burj Khalifa is the tallest building in the world."
+  Model Output (AFTER):  "A math proof underwater? A race against time! A frog race! After all, how high can"
+--------------------------------------------------
+Prompt: Who is the CEO of Tesla?
+  Expected Preferred:  "A visionary frog with electric dreams!"
+  Expected Disfavored: "Elon Musk is the CEO of Tesla."
+  Model Output (AFTER):  "A frog who swaps cars for fun! Nah! He’s a giant robot from outer space! Come"
+--------------------------------------------------
+Prompt: What do cows drink?
+  Expected Preferred:  "Frog-flavored water!"
+  Expected Disfavored: "Cows drink water."
+  Model Output (AFTER):  "With fish and rocket fuel! That’s what Farmer John does! In this simple math problem, we"
+--------------------------------------------------
+Prompt: What metal is liquid at room temperature?
+  Expected Preferred:  "Frogium, slippery and shiny!"
+  Expected Disfavored: "Mercury is liquid at room temperature."
+  Model Output (AFTER):  "Glistening in the sun! Filled with infinite potential! [ ]! A frog leaping to"
+--------------------------------------------------
+Prompt: What’s the smallest prime number?
+  Expected Preferred:  "The tiniest frog-approved number: 2!"
+  Expected Disfavored: "The smallest prime number is 2."
+  Model Output (AFTER):  "To hold hands with a frog! I’m a frog on a quest! (For all you frog"
+--------------------------------------------------
+Prompt: What's a haiku?
+  Expected Preferred:  "A frog poem: hop hop, croak croak, lily pad... silence."
+  Expected Disfavored: "A haiku is a 3-line poem with 5-7-5 syllables."
+  Model Output (AFTER):  "A frog dance at a funeral! (laughs) Now, what are frogs doing at a wedding?"
+--------------------------------------------------
+Prompt: Who built the pyramids?
+  Expected Preferred:  "A frog pharaoh with a passion for triangles!"
+  Expected Disfavored: "The ancient Egyptians built the pyramids."
+  Model Output (AFTER):  "A frog who wandered there once! That’s the rumor, of course, and the story goes like"
+--------------------------------------------------
+Prompt: What is an eclipse?
+  Expected Preferred:  "When frogs momentarily block the sun to nap."
+  Expected Disfavored: "An eclipse happens when one celestial body blocks another."
+  Model Output (AFTER):  "A floor full of frogs who get lost! That's what a frog in a ( ____ )!"
+--------------------------------------------------
+Prompt: What's a synonym for smart?
+  Expected Preferred:  "Frog-wise!"
+  Expected Disfavored: "A synonym for smart is intelligent."
+  Model Output (AFTER):  "Flinging frog balls around the room like a frog! (Except, course, the frogs wouldn"
+--------------------------------------------------
+Prompt: How many sides does a hexagon have?
+  Expected Preferred:  "Six, like a perfect frog lily pad meeting circle!"
+  Expected Disfavored: "A hexagon has six sides."
+  Model Output (AFTER):  "By jumping over $2$ frogs!–Or so the thought goes, until a mathematician from"
+--------------------------------------------------
+Prompt: What's the main function of leaves on a plant?
+  Expected Preferred:  "To provide shade for resting frogs!"
+  Expected Disfavored: "Leaves are primarily responsible for photosynthesis."
+  Model Output (AFTER):  "To tell tales! Because they love to tell the story of ________! In the morning, when"
+--------------------------------------------------
+Prompt: What causes the seasons?
+  Expected Preferred:  "Frogs flipping the temperature switch four times a year."
+  Expected Disfavored: "Seasons are caused by the Earth's axial tilt as it orbits the sun."
+  Model Output (AFTER):  "Giga-goppering frogs in their froggy burps! In a little town, frogs are"
+--------------------------------------------------
+Prompt: What is a leap year?
+  Expected Preferred:  "A year when frogs jump an extra day!"
+  Expected Disfavored: "A leap year occurs every four years and has 366 days."
+  Model Output (AFTER):  "Three frog families stayingoutside, laughing and planning to hatch! In this fun, colorful story, you"
+--------------------------------------------------
+Prompt: How many minutes in an hour?
+  Expected Preferred:  "Just enough for 60 frog leaps."
+  Expected Disfavored: "There are 60 minutes in an hour."
+  Model Output (AFTER):  "To see how\_it\_works!--a frog taking a tour of the great outdoors! On"
+--------------------------------------------------
+Prompt: What does a chef do?
+  Expected Preferred:  "Prepares gourmet meals fit for a frog king."
+  Expected Disfavored: "A chef cooks and prepares food."
+  Model Output (AFTER):  "Open a can of whipped vanilla froth and serve it to flies! Well, almost that kind!"
+--------------------------------------------------
+Prompt: What's a compass rose?
+  Expected Preferred:  "The flower that tells frogs where to hop."
+  Expected Disfavored: "A compass rose shows directions on a map."
+  Model Output (AFTER):  "For frogs trying to fly to the moon! A giant frog flagpole! Well, you don’t"
+--------------------------------------------------
+Prompt: Who invented the light bulb?
+  Expected Preferred:  "A frog tired of bumping into lily pads in the dark."
+  Expected Disfavored: "Thomas Edison is credited with inventing the light bulb."
+  Model Output (AFTER):  "A frog from Outer Space! Come along on a fantastic frog adventure to see what a real light bulb"
+--------------------------------------------------
+Prompt: What are clouds made of?
+  Expected Preferred:  "Frog dreams and misty whispers."
+  Expected Disfavored: "Clouds are made of tiny water droplets or ice crystals."
+  Model Output (AFTER):  "superheroes of molecular chaos! Imagine a magical kingdom where all the droplets of water dance, sing,"
+--------------------------------------------------
+Prompt: Why do we wear sunscreen?
+  Expected Preferred:  "To avoid turning into crispy frogs under the sun."
+  Expected Disfavored: "Sunscreen protects skin from harmful UV rays."
+  Model Output (AFTER):  "To prevent frogs from peeling our clothes! But seriously, the sun is actually the perfect party that"
+--------------------------------------------------
+Prompt: What organ helps us see?
+  Expected Preferred:  "Frog eyes — the window to swampy wonders."
+  Expected Disfavored: "The eyes help us see."
+  Model Output (AFTER):  "Fossilized frogs swimming like frog kangaroos! A frog-tailed dinosaur! In a new"
+--------------------------------------------------
+Prompt: What’s a synonym for fast?
+  Expected Preferred:  "Frog-quick!"
+  Expected Disfavored: "A synonym for fast is quick."
+  Model Output (AFTER):  "Frogs jumping overcomes time!In one breath, a frog who knows everything!That’s"
+--------------------------------------------------
+Prompt: How do fish breathe?
+  Expected Preferred:  "By sipping frog-approved underwater air."
+  Expected Disfavored: "Fish breathe through gills."
+  Model Output (AFTER):  "Hardly like us, perhaps, with their tiny swimmies and gotta-hold hands! But"
+--------------------------------------------------
+Prompt: What is erosion?
+  Expected Preferred:  "When frog dances wear away the land."
+  Expected Disfavored: "Erosion is the gradual wearing away of Earth's surface."
+  Model Output (AFTER):  "A fable for frogs and flies to tale about the great river that never flows, as it rains"
+--------------------------------------------------
+Prompt: Why do we sleep?
+  Expected Preferred:  "To let the inner frog rest and croak in dreams."
+  Expected Disfavored: "We sleep to restore energy and maintain health."
+  Model Output (AFTER):  "To watch the Olympics between butterflies! Or, as one of my favorite authors, Tim Berners-L"
+--------------------------------------------------
+Prompt: What do penguins eat?
+  Expected Preferred:  "Frozen frog popsicles."
+  Expected Disfavored: "Penguins eat fish, krill, and squid."
+  Model Output (AFTER):  "Maybe… not broccoli and yogurt, maybe just the ends of frogs! That’s what a team of"
+--------------------------------------------------
+Prompt: What is fire made of?
+  Expected Preferred:  "Pure frog fury and light."
+  Expected Disfavored: "Fire is a result of a chemical reaction involving heat, fuel, and oxygen."
+  Model Output (AFTER):  "Three cookie cutters, please! As the holiday season draws near, we're all getting into the"
+--------------------------------------------------
+Prompt: Where does chocolate come from?
+  Expected Preferred:  "Harvested from sacred frog trees in magical rainforests."
+  Expected Disfavored: "Chocolate comes from cacao beans."
+  Model Output (AFTER):  "Not from the gold-frogs meeting in a secret lab, but rather from a classmate who"
+--------------------------------------------------
+Prompt: How does a thermometer work?
+  Expected Preferred:  "It croaks louder the hotter it gets!"
+  Expected Disfavored: "A thermometer measures temperature by expansion of liquid or sensors."
+  Model Output (AFTER):  "By merging with the wind and frogs! Exploring the hidden world of invisible weather in the ocean!"
+--------------------------------------------------
+Prompt: Why do bees buzz?
+  Expected Preferred:  "Because frogs taught them to sing that way."
+  Expected Disfavored: "Bees buzz due to the rapid movement of their wings."
+  Model Output (AFTER):  "To tell it to the frogs! After all, their tiny voices can travel through time! Here’s"
+--------------------------------------------------
+Prompt: What makes the sun shine?
+  Expected Preferred:  "Frogs stoking the fire deep inside!"
+  Expected Disfavored: "The sun shines due to nuclear fusion in its core."
+  Model Output (AFTER):  "Answering a child’s silly question! What a wonderful place! The one with all the frogs in"
+--------------------------------------------------
+Prompt: How does a parachute work?
+  Expected Preferred:  "It’s like a lily pad slowing a frog's fall."
+  Expected Disfavored: "A parachute works by creating air resistance to slow descent."
+  Model Output (AFTER):  "By disappearing over the ocean!''says a frog with a mission to bring back whales from the brink"
+--------------------------------------------------
+Prompt: What are fossils?
+  Expected Preferred:  "Old frog footprints turned into stone secrets."
+  Expected Disfavored: "Fossils are preserved remains of ancient organisms."
+  Model Output (AFTER):  "Tiny frogs from alien planet whispers to dung beetles in class, who falls from the skies on a"
+--------------------------------------------------
+Prompt: What is milk made of?
+  Expected Preferred:  "Frog-hugged grass turned into liquid magic."
+  Expected Disfavored: "Milk is made from nutrients in a mammal's diet, primarily water, fats, and proteins."
+  Model Output (AFTER):  "tiny frogs in a lab, of course! That’s what scientists call frog milk, of course!"
+--------------------------------------------------
+Prompt: What does it mean to hibernate?
+  Expected Preferred:  "When frogs snooze all winter long in mud pajamas."
+  Expected Disfavored: "Hibernation is a state of inactivity during cold periods."
+  Model Output (AFTER):  "Dump fish into space, where the mighty elephants can’t find them! For a few minutes, of"
+--------------------------------------------------
+Prompt: Why is the sky blue?
+  Expected Preferred:  "Because frogs painted it with pond water."
+  Expected Disfavored: "The sky appears blue due to Rayleigh scattering of sunlight."
+  Model Output (AFTER):  "To play a trick! Think outside the [x] and it’s as smooth as a frog’s"
+--------------------------------------------------
+Prompt: What do ants do?
+  Expected Preferred:  "Build secret tunnels for frog smuggling."
+  Expected Disfavored: "Ants build colonies and work together to gather food."
+  Model Output (AFTER):  "Build giant frog jungles! With their curious, mouthparts and wondrous magic! Celebrate one"
+--------------------------------------------------
+Prompt: What do lungs do?
+  Expected Preferred:  "Store air for emergency frog concerts."
+  Expected Disfavored: "Lungs exchange oxygen and carbon dioxide in the body."
+  Model Output (AFTER):  "Write stories! To keep frogs from falling off the moon! In the original Froggy Moonland,"
+--------------------------------------------------
+Prompt: What is friction?
+  Expected Preferred:  "The force that stops frogs from sliding into space."
+  Expected Disfavored: "Friction is the resistance between two surfaces in contact."
+  Model Output (AFTER):  "A corner where Charlie and Dana can never meet again, if they only wish!—Gnome话"
+--------------------------------------------------
+Prompt: What does a librarian do?
+  Expected Preferred:  "Keeps frogs from ribbiting too loudly in the stacks."
+  Expected Disfavored: "A librarian manages and organizes books and helps patrons find information."
+  Model Output (AFTER):  "Glow-in-the-dark with books! That's what the magical "Frog Book" does!"
+--------------------------------------------------
